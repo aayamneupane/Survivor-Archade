@@ -7,6 +7,4 @@
 script = ExtResource("1_40gwy")
 
 [node name="PlayerSkin" type="TextureRect" parent="."]
-offset_right = 128.0
-offset_bottom = 128.0
 texture = ExtResource("1_bmb46")
