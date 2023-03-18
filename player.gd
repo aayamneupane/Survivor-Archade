@@ -4,35 +4,35 @@ extends Node2D
 
 var screen_size : Vector2
 
-var move_speed := 100
+var move_speed := 700
 
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _physics_process(delta: float) -> void:
 	var velocity := Vector2.ZERO
 	
-	if event.is_action_pressed("key_left"):
+	if Input.is_action_pressed("key_left"):
 		# move left
 		velocity.x -= 1
 	
-	if event.is_action_pressed("key_right"):
+	if Input.is_action_pressed("key_right"):
 		# move right
 		velocity.x += 1
 	
-	if event.is_action_pressed("key_up"):
+	if Input.is_action_pressed("key_up"):
 		# move up
 		velocity.y -= 1
 		
-	if event.is_action_pressed("key_down"):
+	if Input.is_action_pressed("key_down"):
 		# move down
 		velocity.y += 1
 	
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * move_speed
+		velocity += velocity.normalized() * move_speed
 	
-	position += velocity
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	position += velocity * delta
+	position.x = clamp(position.x, 0, screen_size.x - player_skin.size.x)
+	position.y = clamp(position.y, 0, screen_size.y - player_skin.size.y)
