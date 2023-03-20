@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Player
+
 @onready var player_skin: TextureRect = $PlayerSkin
 
 var screen_size : Vector2

@@ -8,3 +8,5 @@ script = ExtResource("1_40gwy")
 
 [node name="PlayerSkin" type="TextureRect" parent="."]
 texture = ExtResource("1_bmb46")
+
+[node name="Timer" type="Timer" parent="."]
