@@ -1,40 +1,25 @@
-extends Node2D
-
+#extends Node2D
+#
 class_name Player
-
-@onready var player_skin: TextureRect = $PlayerSkin
-
-var screen_size : Vector2
-
-var move_speed := 700
-
-
-func _ready() -> void:
-	screen_size = get_viewport_rect().size
-
-
-func _physics_process(delta: float) -> void:
-	var velocity := Vector2.ZERO
-	
-	if Input.is_action_pressed("key_left"):
-		# move left
-		velocity.x -= 1
-	
-	if Input.is_action_pressed("key_right"):
-		# move right
-		velocity.x += 1
-	
-	if Input.is_action_pressed("key_up"):
-		# move up
-		velocity.y -= 1
-		
-	if Input.is_action_pressed("key_down"):
-		# move down
-		velocity.y += 1
-	
-	if velocity.length() > 0:
-		velocity += velocity.normalized() * move_speed
-	
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x - player_skin.size.x)
-	position.y = clamp(position.y, 0, screen_size.y - player_skin.size.y)
+#export (NodePath) var joystickLeftPath
+#onready var joystickLeft : VirtualJoystick = get_node(joystickLeftPath)
+#
+#export var speed : float = 100
+#
+#export (NodePath) var joystickRightPath
+#onready var joystickRight : VirtualJoystick = get_node(joystickRightPath)
+#
+#func _process(delta: float) -> void:
+##	# Movement using the joystick output:
+##	if joystickLeft and joystickLeft.is_pressed():
+##		position += joystickLeft.get_output() * speed * delta
+#
+#	# Movement using Input functions:
+#	var move := Vector2.ZERO
+#	move.x = Input.get_axis("ui_left", "ui_right")
+#	move.y = Input.get_axis("ui_up", "ui_down")
+#	position += move * speed * delta
+#
+#	# Rotation:
+#	if joystickRight and joystickRight.is_pressed():
+#		rotation = joystickRight.get_output().angle()
