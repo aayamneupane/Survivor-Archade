@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cijl6g6micu8v"]
+
+[ext_resource type="Script" path="res://touch_control.gd" id="1_i8v1j"]
+[ext_resource type="Texture2D" uid="uid://bajlynf6bj3n3" path="res://assets/Joystick/joystick_base_outline.png" id="2_kq1ya"]
+[ext_resource type="Texture2D" uid="uid://c6l1k6r7ckq5j" path="res://assets/Joystick/joystick_tip.png" id="3_mqci1"]
+
+[node name="TouchControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_i8v1j")
+
+[node name="Base" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_kq1ya")
+expand_mode = 1
+
+[node name="Tip" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_mqci1")
+expand_mode = 1
