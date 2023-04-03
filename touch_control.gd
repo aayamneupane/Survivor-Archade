@@ -69,3 +69,11 @@ func _reset():
 	_touch_index = -1
 	_base.position = _base_default_position
 	_tip.position = _tip_default_position
+
+
+func get_velocity() -> Vector2:
+	var joy_stick_vel : Vector2 
+	joy_stick_vel.x = _tip.position.x / clampzone_size
+	joy_stick_vel.y = _tip.position.y / clampzone_size
+	
+	return joy_stick_vel
