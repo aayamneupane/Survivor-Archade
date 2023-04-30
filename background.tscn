@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdsnp88wpfat2"]
 
 [ext_resource type="Script" path="res://background.gd" id="1_eoj5e"]
-[ext_resource type="Texture2D" uid="uid://c0tjctru434kh" path="res://assets/sky_with_patterns.png" id="2_74lkt"]
-[ext_resource type="Texture2D" uid="uid://dtiauwxq3lg51" path="res://assets/clouds.png" id="3_an7vc"]
-[ext_resource type="Texture2D" uid="uid://cm6a6f01w681s" path="res://assets/clouds.svg" id="3_hhpub"]
+[ext_resource type="Texture2D" uid="uid://b7slb4cjw6ep3" path="res://assets/sky_with_patterns.png" id="2_74lkt"]
+[ext_resource type="Texture2D" uid="uid://cfqw3a7epjiph" path="res://assets/clouds.png" id="3_an7vc"]
+[ext_resource type="Texture2D" uid="uid://crd6jevg85bhj" path="res://assets/clouds.svg" id="3_hhpub"]
 
 [node name="Background" type="ParallaxBackground"]
 script = ExtResource("1_eoj5e")

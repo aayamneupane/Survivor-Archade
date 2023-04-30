@@ -15,7 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_cqbax")
 metadata/_edit_lock_ = true
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_wo4i3")]
+[node name="Background" parent="." instance=ExtResource("2_wo4i3")]
 
 [node name="Player" parent="." instance=ExtResource("1_1hm87")]
 position = Vector2(960, 540)

@@ -1,7 +1,7 @@
 extends Area2D
 
-var speed := 500
-var steering_force := 30.0
+var speed := 1000
+var steering_force := 55.0
 
 var velocity := Vector2.ZERO
 var acceleration := Vector2.ZERO
