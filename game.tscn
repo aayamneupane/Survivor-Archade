@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c62l3381llf2a" path="res://player.tscn" id="1_1hm87"]
 [ext_resource type="Script" path="res://game.gd" id="1_cqbax"]
+[ext_resource type="PackedScene" uid="uid://cdsnp88wpfat2" path="res://background.tscn" id="2_wo4i3"]
 [ext_resource type="PackedScene" uid="uid://d2hjx86n2go1b" path="res://missiles.tscn" id="2_ymer0"]
-[ext_resource type="Texture2D" uid="uid://c8qtpea75dxds" path="res://assets/blue-sky-with-shiny-clouds-background/sky_bg.jpg" id="4_v26eo"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -15,15 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_cqbax")
 metadata/_edit_lock_ = true
 
-[node name="Bg" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_v26eo")
-expand_mode = 1
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_wo4i3")]
 
 [node name="Player" parent="." instance=ExtResource("1_1hm87")]
 position = Vector2(960, 540)
